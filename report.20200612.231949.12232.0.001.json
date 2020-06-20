@@ -1,0 +1,478 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200612.231949.12232.0.001.json",
+    "dumpEventTime": "2020-06-12T23:19:49Z",
+    "dumpEventTimeStamp": "1592021989038",
+    "processId": 12232,
+    "cwd": "D:\\ME\\blog-badcode",
+    "commandLine": [
+      "node",
+      "D:\\ME\\blog-badcode\\.cache\\tmp-10840-whbuJmHRzYY6"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Home Single Language",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 714171,
+        "nice": 0,
+        "sys": 612296,
+        "idle": 6550343,
+        "irq": 60031
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 599015,
+        "nice": 0,
+        "sys": 311625,
+        "idle": 6965875,
+        "irq": 5484
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 1210125,
+        "nice": 0,
+        "sys": 608234,
+        "idle": 6058156,
+        "irq": 7312
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 548140,
+        "nice": 0,
+        "sys": 272093,
+        "idle": 7056281,
+        "irq": 4187
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 911296,
+        "nice": 0,
+        "sys": 457437,
+        "idle": 6507781,
+        "irq": 6578
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 517968,
+        "nice": 0,
+        "sys": 287625,
+        "idle": 7070906,
+        "irq": 3046
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 862828,
+        "nice": 0,
+        "sys": 612234,
+        "idle": 6401437,
+        "irq": 5468
+      },
+      {
+        "model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx  ",
+        "speed": 1996,
+        "user": 567312,
+        "nice": 0,
+        "sys": 309046,
+        "idle": 7000140,
+        "irq": 3015
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "02:f4:bf:c0:a0:a3",
+        "address": "fe80::c1f3:ed51:cb69:ef64",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 16
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "02:f4:bf:c0:a0:a3",
+        "address": "192.168.1.77",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "AMAZONTIC-DEV2"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff715361729",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff715365b4c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff715364b08",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff71545369b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff715c582de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff715c40321",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff715b0dbec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff715b18f90",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff715b15ac4",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff715b0b353",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff715b09b24",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff715b2adf5",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff715896e19",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff71608404d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x00007ff716084f81",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+571841"
+    },
+    {
+      "pc": "0x000002cf258d956c",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2152304640,
+    "totalCommittedMemory": 2152304640,
+    "usedMemory": 2117976120,
+    "availableMemory": 47687088,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047488,
+        "used": 181960,
+        "available": 865528
+      },
+      "old_space": {
+        "memorySize": 2086514688,
+        "committedMemory": 2086514688,
+        "capacity": 2056795672,
+        "used": 2056761832,
+        "available": 33840
+      },
+      "code_space": {
+        "memorySize": 3047424,
+        "committedMemory": 3047424,
+        "capacity": 2631840,
+        "used": 2631840,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 5771264,
+        "committedMemory": 5771264,
+        "capacity": 3972560,
+        "used": 3972560,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 53657600,
+        "committedMemory": 53657600,
+        "capacity": 53528112,
+        "used": 53528112,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 954368,
+        "committedMemory": 954368,
+        "capacity": 867520,
+        "used": 867520,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 302.265,
+    "kernelCpuSeconds": 219.328,
+    "cpuConsumptionPercent": 26.0146,
+    "maxRss": 2895437824,
+    "pageFaults": {
+      "IORequired": 2397769,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 30790,
+      "writes": 3050
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\LENOVO\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132356886688451124",
+    "ChocolateyToolsLocation": "C:\\tools",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "AMAZONTIC-DEV2",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "configsetroot": "C:\\WINDOWS\\ConfigSetRoot",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "GATSBY_BUILD_STAGE": "develop",
+    "gatsby_executing_command": "develop",
+    "GATSBY_LOGGER": "ink",
+    "gatsby_log_level": "normal",
+    "GIT_ASKPASS": "c:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "HOME": "C:\\Users\\LENOVO",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\LENOVO",
+    "LANG": "es_ES.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\LENOVO\\AppData\\Local",
+    "LOGONSERVER": "\\\\AMAZONTIC-DEV2",
+    "MSYSTEM": "MINGW64",
+    "NODE_ENV": "development",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OneDrive": "C:\\Users\\LENOVO\\OneDrive",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\LENOVO\\bin;C:\\Python27;C:\\Python27\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Yarn\\bin;C:\\Program Files\\nodejs;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\dotnet;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\LENOVO\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\LENOVO\\AppData\\Local\\Yarn\\bin;C:\\Users\\LENOVO\\AppData\\Roaming\\npm;C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Azure Data Studio\\bin;C:\\ProgramData\\LENOVO\\atom\\bin;C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.1\\bin;C:\\Users\\LENOVO\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files (x86)\\GitHub CLI;C:\\Program Files\\JetBrains\\PhpStorm 2020.1.1\\bin;C:\\tools\\dart-sdk\\bin;C:\\Users\\LENOVO\\AppData\\Roaming\\Pub\\Cache\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PhpStorm": "C:\\Program Files\\JetBrains\\PhpStorm 2020.1.1\\bin;",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD",
+    "PROCESSOR_LEVEL": "23",
+    "PROCESSOR_REVISION": "1100",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "D:/ME/blog-badcode",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\LENOVO\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.47.0-insider",
+    "TMP": "C:\\Users\\LENOVO\\AppData\\Local\\Temp",
+    "USERDOMAIN": "AMAZONTIC-DEV2",
+    "USERDOMAIN_ROAMINGPROFILE": "AMAZONTIC-DEV2",
+    "USERNAME": "LENOVO",
+    "USERPROFILE": "C:\\Users\\LENOVO",
+    "VIPSHOME": "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release",
+    "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code Insiders\\Code - Insiders.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-d25b8942ee-sock",
+    "WebStorm": "C:\\Program Files\\JetBrains\\WebStorm 2020.1\\bin;",
+    "WINDIR": "C:\\WINDOWS",
+    "_": "C:/Program Files/nodejs/node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\winmmbase.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\sharp.node",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libvips-42.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libvips-cpp.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libglib-2.0-0.dll",
+    "C:\\WINDOWS\\System32\\ole32.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libintl-8.dll",
+    "C:\\WINDOWS\\System32\\SHELL32.dll",
+    "C:\\WINDOWS\\System32\\shcore.dll",
+    "C:\\WINDOWS\\System32\\windows.storage.dll",
+    "C:\\WINDOWS\\System32\\shlwapi.dll",
+    "C:\\WINDOWS\\System32\\cryptsp.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libcairo-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libexif-12.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libexpat-1.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libfontconfig-1.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgif-7.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgio-2.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgmodule-2.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgobject-2.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libjpeg-62.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\liblcms2-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\liborc-0.4-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpango-1.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpangoft2-1.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpng16-16.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libwebp-7.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libwebpdemux-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libwebpmux-3.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libiconv-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libz1.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libfreetype-6.dll",
+    "C:\\WINDOWS\\SYSTEM32\\MSIMG32.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpixman-1-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libffi-7.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libfribidi-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libharfbuzz.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgsf-1-114.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\librsvg-2-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libtiff-5.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgcc_s_seh-1.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libgdk_pixbuf-2.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libxml2-2.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpangocairo-1.0-0.dll",
+    "\\\\?\\D:\\ME\\blog-badcode\\node_modules\\sharp\\build\\Release\\libpangowin32-1.0-0.dll",
+    "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}
