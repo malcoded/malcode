@@ -1,18 +1,35 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Emoji from "./../components/emoji"
+import home_image from "./../images/home-pep.svg"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="row">
+      <div className="img_portada">
+        <img src={home_image} alt="home" />
+      </div>
+      <div>
+        <h1>
+          ¿Quieres desarrollar aplicaciones <Emoji symbol="🔥" label="fuego" />{" "}
+          increíbles más <Emoji symbol="⚡" /> rapido?
+        </h1>
+        <p>¡Has venido al lugar correcto!</p>
+        <p>
+          badcode es un ecosistema de recursos prácticos para desarrolladores
+          que desean crear aplicaciones alta calidad .<br /> ¡Lleva tus
+          habilidades de programación al siguiente nivel!
+        </p>
+        <Link to="/snippets" className="btn btn-orange-outline">
+          Explorar
+        </Link>
+      </div>
     </div>
+    <hr className="hr" />
   </Layout>
 )
 

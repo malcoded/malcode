@@ -9,18 +9,19 @@ const Nav = ({ siteTitle }) => (
       <i className="fad fa-search" />
       <span className="item-label">Buscar</span>
     </Link>
-    <Link className="item" to="/lessons">
-      <i className="fad fa-tv-retro" />
-      <span className="item-label">Video</span>
-    </Link>
-    <Link className="item" to="/courses">
-      <i className="fad fa-cassette-tape" />
-      <span className="item-label">Cursos</span>
-    </Link>
     <Link className="item" to="/snippets">
       <i className="fad fa-bolt" />
       <span className="item-label">Snippets</span>
     </Link>
+    <Link className="item" to="/lessons">
+      <i className="fad fa-tv-retro" />
+      <span className="item-label">Video</span>
+    </Link>
+    <Link className="item" to="/about">
+      <i className="fad fa-qrcode" />
+      <span className="item-label">About</span>
+    </Link>
+
     <div className="item">
       <img src={googleIcon} alt="google-login" />
       <span className="tag tag-sm">Login</span>

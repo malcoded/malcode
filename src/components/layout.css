@@ -205,3 +205,77 @@ h6 {
 .border-bottom {
   border-bottom: var(--h-border);
 }
+
+/* btn */
+.btn {
+  background: var(--nav-bg);
+  margin: .25em .25em .25em 0;
+  color: var(--text-color);
+  font-size: .625em;
+  border: 2px solid transparent;
+  padding: 1em 2em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.btn-orange-outline {
+  background: transparent;
+  color: "orange";
+  border: 2px solid var(--orange);
+  transition: background .4s ease;
+}
+
+.btn-orange-outline:hover {
+  box-shadow: var(--card-shadow);
+  background: var(--orange);
+  color: #fff;
+  transition: background .4s ease;
+}
+
+.btn-blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-red {
+  background: var(--red);
+  color: #fff;
+}
+
+.btn-green {
+  background: var(--green);
+  color: #fff;
+}
+
+
+/* tag */
+.tag {
+  display: inline-block;
+  border-radius: 3px;
+  padding: .2em .5em .3em;
+  border-radius: 2px;
+  background: var(--tag-bg);
+  color: var(--text-color);
+  font-weight: 600;
+  margin: .25em .1em;
+}
+
+.tag-node {
+  background: #90c53f;
+  color: #46483d;
+}
+
+.tag-sm {
+  font-size: .7em;
+  display: inline-block;
+  letter-spacing: .15ch;
+  font-weight: 400;
+}

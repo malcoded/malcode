@@ -7,6 +7,7 @@ import Nav from "./nav"
 import "./../assets/fontawesome/css/all.min.css"
 import "./variables.css"
 import "./layout.css"
+import "./row.css"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1024,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
