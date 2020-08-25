@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
 package-lock.json
 # Runtime data
 pids
@@ -33,9 +34,11 @@ bower_components
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+
 # Dependency directories
 node_modules/
 jspm_packages/
+.cache
 
 # Typescript v1 declaration files
 typings/
