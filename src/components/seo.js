@@ -98,7 +98,7 @@ SEO.defaultProps = {
   description: ``,
   keywords: `javascript,react,angular,vue,malcode,desarrollo web, aplicaciones`,
   url: `https://malcode.dev/`,
-  image: "",
+  image: "https://bit.ly/2EeAGoh",
 }
 
 SEO.propTypes = {
