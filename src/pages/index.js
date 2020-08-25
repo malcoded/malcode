@@ -20,11 +20,11 @@ const IndexPage = () => (
         </h1>
         <p>¡Has venido al lugar correcto!</p>
         <p>
-          badcode es un ecosistema de recursos prácticos para desarrolladores
-          que desean crear aplicaciones alta calidad .<br /> ¡Lleva tus
+          malcode es un ecosistema de recursos prácticos para desarrolladores
+          que desean crear aplicaciones de alta calidad .<br /> ¡Lleva tus
           habilidades de programación al siguiente nivel!
         </p>
-        <Link to="/snippets" className="btn btn-orange-outline">
+        <Link to="/posts" className="btn btn-orange-outline">
           Explorar
         </Link>
       </div>

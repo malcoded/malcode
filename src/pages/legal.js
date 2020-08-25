@@ -11,8 +11,8 @@ const Legal = () => {
       <div className="bc-about-section">
         <h3 style={{ padding: 0, margin: 0 }}>Contacto</h3>
         <span>E-Mail: </span>
-        <a href="mailto:contacto@badcode.dev" target="_blank" rel="noreferrer">
-          contacto@badcode.dev
+        <a href="mailto:contacto@malcode.dev" target="_blank" rel="noreferrer">
+          contacto@malcode.dev
         </a>
       </div>
     </Layout>

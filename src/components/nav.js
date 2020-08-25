@@ -9,13 +9,13 @@ const Nav = ({ siteTitle }) => (
       <i className="fad fa-search" />
       <span className="item-label">Buscar</span>
     </Link>
-    <Link className="item" to="/snippets">
-      <i className="fad fa-bolt" />
-      <span className="item-label">Snippets</span>
+    <Link className="item" to="/posts">
+      <i className="fad fa-code-commit" />
+      <span className="item-label">Posts</span>
     </Link>
     <Link className="item" to="/lessons">
       <i className="fad fa-tv-retro" />
-      <span className="item-label">Video</span>
+      <span className="item-label">Videos</span>
     </Link>
     <Link className="item" to="/about">
       <i className="fad fa-qrcode" />

@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Layout>
       <SEO title="Acerca de" />
-      <Pagetitle title="De qué se trata badcode 🤷‍♂️" />
+      <Pagetitle title="De qué se trata malcode 🤷‍♂️" />
       <div className="bc-about-section">
         <h2>
           ¡Tutoriales detallados que contienen todo lo que necesita para

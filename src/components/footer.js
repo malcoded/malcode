@@ -9,7 +9,7 @@ const Footer = ({ menuLinks }) => {
     <footer>
       <div className="copyright">
         <div className="copyright-item">
-          Copyright &copy; {new Date().getFullYear()} badcode <br />
+          Copyright &copy; {new Date().getFullYear()} malcode <br />
         </div>
         <div className="copyright-item">
           Created with <img src={reactIcon} alt="react" className="bc-pl-4" />
