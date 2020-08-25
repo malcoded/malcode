@@ -8,7 +8,7 @@ const EmptyPage = ({
   button = { label: "Ver Posts" },
   description = "Estamos trabajando para traer el mejor contenido en video 📺, para ti.",
   url = "/posts",
-  title = "!CREANDO CONTENIDO... ✍!",
+  title = "¡CREANDO CONTENIDO... ✍!",
   emoji = "",
 }) => (
   <Layout>
