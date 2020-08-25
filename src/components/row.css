@@ -15,7 +15,8 @@
 }
 
 .row-max-1,
-.row-max-2 {
+.row-max-2,
+.row-max-3 {
     display: grid;
     justify-content: center;
 }
@@ -23,6 +24,12 @@
 .row-max-1 {
     gap: 1.5rem;
     grid-template-columns: repeat(1, minmax(250px, 650px));
+}
+
+.row-max-3 {
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+    justify-content: space-evenly;
 }
 
 @media only screen and (min-width:600px) {}

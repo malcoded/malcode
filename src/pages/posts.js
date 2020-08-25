@@ -18,21 +18,24 @@ const Post = porps => {
               description
               title
             }
+            fields {
+              slug
+            }
           }
         }
       }
     }
   `)
   const posts = data.allMdx.edges || []
-  console.log("posts", posts)
   return (
     <Layout>
       <SEO title="Post" />
       <Pagetitle title="Todas las publicaciones" />
       <div className="row-max-1">
-        {posts.map(({ node }) => (
+        {posts.map(({ node }, index) => (
           <CardPost
-            slug={node.slug}
+            key={index}
+            slug={node.fields.slug}
             title={node.frontmatter.title}
             description={node.excerpt}
             date={node.frontmatter.date}

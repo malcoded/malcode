@@ -22,21 +22,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/posts`,
+        path: `${__dirname}/content/`,
         name: `posts`,
       },
     },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/content/`,
       },
     },
     {
@@ -45,14 +38,12 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           posts: require.resolve("./src/components/layout.js"),
-          // posts: require.resolve("./src/templates/blog-post.js"),
         },
       },
     },
     `gatsby-remark-prismjs`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -62,7 +53,27 @@ module.exports = {
         },
       },
     },
-
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-114960628-2",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "devcode.dev",
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -75,6 +86,7 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

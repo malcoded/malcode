@@ -6,7 +6,7 @@ import Emoji from "../components/emoji"
 import not_found_page from "./../images/not_found.svg"
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="404: Pagina no encontrada" />
     <div className="row-max-1">
       <div className="gv-container-not-found">
         <h3>PAGINA NO ENCONTRADA</h3>

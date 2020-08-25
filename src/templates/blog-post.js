@@ -6,9 +6,7 @@ import SEO from "../components/seo"
 
 export default ({ location, pageContext, data }) => {
   const { frontmatter, body } = data.mdx
-  const siteTitle = ""
-  // data.site.siteMetadata.title
-  console.log("data.site", data.site)
+  const siteTitle = data.site.siteMetadata.title
   const { previous, next, excerpt } = pageContext
 
   return (
@@ -53,7 +51,7 @@ export default ({ location, pageContext, data }) => {
             padding: 0,
           }}
         >
-          {/* <li>
+          <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
@@ -66,7 +64,7 @@ export default ({ location, pageContext, data }) => {
                 {next.frontmatter.title} →
               </Link>
             )}
-          </li> */}
+          </li>
         </ul>
       </nav>
     </Layout>
