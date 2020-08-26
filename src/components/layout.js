@@ -13,7 +13,6 @@ import "./row.css"
 import "./cardPost.css"
 
 const Layout = ({ children }) => {
-  console.log("Layout -> children", children)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,7 +28,6 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    // <MDXProvider>
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Nav siteTitle={data.site.siteMetadata.title} />
@@ -38,7 +36,6 @@ const Layout = ({ children }) => {
         <Footer menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
     </>
-    // </MDXProvider>
   )
 }
 

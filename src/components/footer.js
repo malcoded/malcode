@@ -7,32 +7,32 @@ import firebaseIcon from "./../images/firebase.svg"
 const Footer = ({ menuLinks }) => {
   return (
     <footer>
-      <div className="copyright">
-        <div className="copyright-item">
+      <div className="gv-copyright">
+        <div className="gv-copyright-item">
           Copyright &copy; {new Date().getFullYear()} malcode <br />
         </div>
-        <div className="copyright-item">
-          Created with <img src={reactIcon} alt="react" className="bc-pl-4" />
+        <div className="gv-copyright-item">
+          Created with <img src={reactIcon} alt="react" className="gv-pl-4" />
           <img src={firebaseIcon} alt="firebase" /> by
           <a
             href="https://github.com/gvargash"
-            className="bc-pl-4"
+            className="gv-pl-4"
             target="_blank"
             rel="noreferrer"
           >
             Gildo Vargas
           </a>
         </div>
-        <hr className="hr" />
+        <hr className="gv-hr" />
       </div>
-      <ul className="menu-footer">
+      <ul className="gv-menu-footer">
         {menuLinks.map(menu => (
           <li key={menu.name}>
             <Link to={menu.url}>{menu.name}</Link>
           </li>
         ))}
       </ul>
-      <hr className="hr" />
+      <hr className="gv-hr" />
     </footer>
   )
 }

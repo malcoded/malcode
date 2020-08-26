@@ -1,87 +1,53 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
+import Pagetitle from "../components/pagetitle"
 import SEO from "../components/seo"
-
-export default ({ location, pageContext, data }) => {
+import Emoji from "../components/emoji"
+export default ({ pageContext, data }) => {
   const { frontmatter, body } = data.mdx
-  const siteTitle = data.site.siteMetadata.title
   const { previous, next, excerpt } = pageContext
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={frontmatter.title}
         description={frontmatter.description || excerpt}
       />
-      <article>
-        <header>
-          <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.date}</p>
-        </header>
+      <Pagetitle title={frontmatter.title} className="gv-post-title" />
+      <MDXProvider>
         <MDXRenderer>{body}</MDXRenderer>
-        {previous === false ? null : (
-          <>
-            {previous && (
-              <Link to={previous.fields.slug}>
-                <p>{previous.frontmatter.title}</p>
-              </Link>
-            )}
-          </>
+      </MDXProvider>
+      <nav className="gv-chapter-nav">
+        {previous && (
+          <div className="chapter-prev">
+            <Link to={previous.fields.slug} rel="prev" className="gv-btn">
+              <Emoji symbol="👈" className="gv-emoji-btn" />
+              <span className="gv-truncate">{previous.frontmatter.title}</span>
+            </Link>
+          </div>
         )}
-        {next === false ? null : (
-          <>
-            {next && (
-              <Link to={next.fields.slug}>
-                <p>{next.frontmatter.title}</p>
-              </Link>
-            )}
-          </>
-        )}
-      </article>
 
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        {next && (
+          <div className="gv-chapter-next">
+            <Link to={next.fields.slug} rel="next" className="gv-btn">
+              <span className="gv-truncate">{next.frontmatter.title}</span>
+              <Emoji symbol="👉" className="gv-emoji-btn" />
+            </Link>
+          </div>
+        )}
       </nav>
     </Layout>
   )
 }
 
-export const query = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    mdx(slug: { eq: $slug }) {
+export const pageQuery = graphql`
+  query BlogPostBySlug($id: String!) {
+    mdx(id: { eq: $id }) {
       id
+      body
       excerpt(pruneLength: 160)
-      html
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")

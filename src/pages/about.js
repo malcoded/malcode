@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Pagetitle from "../components/pageTitle"
+import Pagetitle from "../components/pagetitle"
 import Emoji from "../components/emoji"
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
     <Layout>
       <SEO title="Acerca de" />
       <Pagetitle title="De qué se trata malcode 🤷‍♂️" />
-      <div className="bc-about-section">
+      <div className="gv-about-section">
         <h2>
           ¡Tutoriales detallados que contienen todo lo que necesita para
           comenzar! <Emoji label="cohete" symbol="🚀" />

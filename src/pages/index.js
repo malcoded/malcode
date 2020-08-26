@@ -32,8 +32,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Aprenda a crear aplicaciones web modernas 🔥" />
-      <div className="row">
-        <div className="img_portada">
+      <div className="gv-row">
+        <div className="gv-img_portada">
           <img src={home_image} alt="home" />
         </div>
         <div>
@@ -48,17 +48,17 @@ const IndexPage = () => {
             que desean crear aplicaciones de alta calidad .<br /> ¡Lleva tus
             habilidades de programación al siguiente nivel!
           </p>
-          <Link to="/posts" className="btn btn-orange-outline">
+          <Link to="/posts" className="gv-btn gv-btn-orange-outline">
             Explorar
           </Link>
         </div>
       </div>
-      <hr className="hr" />
+      <hr className="gv-hr" />
       <header className="gv-container-center-title">
         <h2>Mira las últimas publicaciones</h2>
         <small>NUEVO CONTENIDO CADA POCOS DÍAS</small>
       </header>
-      <div className="row-max-3">
+      <div className="gv-row-max-3">
         {posts.map(({ node }, index) => (
           <CardPost
             key={index}

@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Pagetitle from "../components/pageTitle"
+import Pagetitle from "../components/pagetitle"
 
 const Legal = () => {
   return (
     <Layout>
       <SEO title="Legal" />
       <Pagetitle title="Sobre este sitio web" />
-      <div className="bc-about-section">
+      <div className="gv-about-section">
         <h3 style={{ padding: 0, margin: 0 }}>Contacto</h3>
         <span>E-Mail: </span>
         <a href="mailto:contacto@malcode.dev" target="_blank" rel="noreferrer">

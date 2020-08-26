@@ -7,7 +7,7 @@ import not_found_page from "./../images/not_found.svg"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Pagina no encontrada" />
-    <div className="row-max-1">
+    <div className="gv-row-max-1">
       <div className="gv-container-not-found">
         <h3>PAGINA NO ENCONTRADA</h3>
         <div className="gv-img_portada_not_found">
@@ -17,7 +17,7 @@ const NotFoundPage = () => (
           Acabas de llegar a una ruta que no existe ... la tristeza.
           <Emoji arial-label="la-tristeza" symbol="😭" />
         </p>
-        <Link to="/posts" className="btn btn-green">
+        <Link to="/posts" className="gv-btn gv-btn-green">
           Ver otras publicaciones
         </Link>
       </div>

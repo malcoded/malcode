@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 export const CardPost = ({ slug, title, date, description }) => {
-  console.log("CardPost -> slug", slug)
   return (
     <article className="gv-card-post">
       <Link to={slug}>

@@ -22,7 +22,7 @@ main {
   padding: 0 1.0875rem 1.45rem,
 }
 
-.logo {
+.gv-logo {
   z-index: 999;
   position: fixed;
   background: var(--orange-pink);
@@ -34,7 +34,7 @@ main {
   transition: opacity .3s;
 }
 
-.sidenav {
+.gv-sidenav {
   height: 100vh;
   min-height: 500px;
   overflow-x: visible;
@@ -53,12 +53,12 @@ main {
   transition: left 0.3s ease;
 }
 
-.sidenav .item {
+.gv-sidenav .gv-item {
   margin-bottom: 20px;
   overflow-x: visible;
 }
 
-.item {
+.gv-item {
   width: var(--nav-width);
   max-width: 70px;
   height: var(--nav-width);
@@ -74,34 +74,41 @@ main {
   font-weight: 600;
 }
 
-.item i {
+.gv-page-title,
+.gv-post-title {
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: .5em;
+}
+
+.gv-item i {
   font-size: 25px;
 }
 
-.item .item-label {
+.gv-item .gv-item-label {
   font-size: 14px;
   padding-top: 8px;
 }
 
-.item img,
-.item svg {
+.gv-item img,
+.gv-item svg {
   width: 1.5em;
   height: 1.5em;
 }
 
-.item:hover {
+.gv-item:hover {
   cursor: pointer;
   color: var(--orange-light);
 }
 
-.tag-sm {
+.gv-tag-sm {
   font-size: .7em;
   display: inline-block;
   letter-spacing: .15ch;
   font-weight: 400;
 }
 
-.tag {
+.gv-tag {
   display: inline-block;
   border-radius: 3px;
   padding: .2em .5em .3em;
@@ -125,20 +132,20 @@ footer {
   opacity: .8;
 }
 
-.copyright {
+.gv-copyright {
   text-align: center;
   width: fit-content;
   margin: 0;
   padding: 0;
 }
 
-.copyright .copyright-item {
+.gv-copyright .gv-copyright-item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.copyright img {
+.gv-copyright img {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -146,7 +153,7 @@ footer {
   margin-bottom: -5px;
 }
 
-.menu-footer {
+.gv-menu-footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -157,21 +164,21 @@ footer {
   cursor: pointer;
 }
 
-.menu-footer li:not(:last-child) {
+.gv-menu-footer li:not(:last-child) {
   padding-right: 1em;
 }
 
-.menu-footer li a {
+.gv-menu-footer li a {
   font-size: .84em;
   color: var(--text-color);
 }
 
-.menu-footer li:hover a {
+.gv-menu-footer li:hover a {
   color: var(--blue);
 }
 
 /* elements */
-.hr {
+.gv-hr {
   border: none;
   border-bottom: var(--h-border);
 }
@@ -203,17 +210,17 @@ h6 {
 }
 
 /* padding */
-.bc-pl-4 {
+.gv-pl-4 {
   padding-left: 4px;
 }
 
 /* border */
-.border-bottom {
+.gv-border-bottom {
   border-bottom: var(--h-border);
 }
 
 /* btn */
-.btn {
+.gv-btn {
   background: var(--nav-bg);
   margin: .25em .25em .25em 0;
   color: var(--text-color);
@@ -232,38 +239,38 @@ h6 {
   cursor: pointer;
 }
 
-.btn-orange-outline {
+.gv-btn-orange-outline {
   background: transparent;
   color: "orange";
   border: 2px solid var(--orange);
   transition: background .4s ease;
 }
 
-.btn-orange-outline:hover {
+.gv-btn-orange-outline:hover {
   box-shadow: var(--card-shadow);
   background: var(--orange);
   color: #fff;
   transition: background .4s ease;
 }
 
-.btn-blue {
+.gv-btn-blue {
   background: var(--blue);
   color: #fff;
 }
 
-.btn-red {
+.gv-btn-red {
   background: var(--red);
   color: #fff;
 }
 
-.btn-green {
+.gv-btn-green {
   background: var(--green);
   color: #fff;
 }
 
 
 /* tag */
-.tag {
+.gv-tag {
   display: inline-block;
   border-radius: 3px;
   padding: .2em .5em .3em;
@@ -274,12 +281,12 @@ h6 {
   margin: .25em .1em;
 }
 
-.tag-node {
+.gv-tag-node {
   background: #90c53f;
   color: #46483d;
 }
 
-.tag-sm {
+.gv-tag-sm {
   font-size: .7em;
   display: inline-block;
   letter-spacing: .15ch;
@@ -318,6 +325,110 @@ h6 {
   margin: 1;
 }
 
+/* paginación */
+.gv-chapter-nav {
+  display: flex;
+  padding: 1.5em 0;
+}
+
+.gv-chapter-prev,
+.gv-chapter-next {
+  align-self: flex-end;
+  max-width: 400px;
+}
+
+.gv-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gv-emoji-btn {
+  margin: 0 .33em;
+  font-size: 1.25em;
+}
+
+/* Editor*/
+.prism-code {
+  padding: 1em;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  background-color: var(--code-bg) !important;
+  color: var(--text-color) !important;
+  overflow-x: auto;
+  box-shadow: var(--card-shadow);
+  margin: 0;
+}
+
+code,
+pre {
+  font-family: var(--font-code);
+  font-size: .95em;
+  font-weight: 500;
+}
+
+.prism-code.language-bash {
+  color: var(--text-color) !important;
+}
+
+/*span.token.keyword.module,
+span.token.keyword {
+  color: #e19ef5 !important;
+}
+
+span.token.string,
+span.token.tag.attr-value {
+  color: #a3eea0 !important;
+}
+
+span.token.tag.class-name {
+  color: #ff8276 !important;
+}
+
+span.token.tag.attr-name {
+  color: #eddc96 !important;
+}
+
+span.token.plain,
+span.token.maybe-class-name,
+span.token.class-name,
+span.token.tag.script.language-javascript,
+span.token.tag.attr-value.punctuation {
+  color: var(--text-color) !important;
+} */
+
+
+.gv-file-name .gv-file-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 10px;
+}
+
+.gv-file-name {
+  background: var(--code-bg);
+  padding: .5em 1em .5em .5em;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: .9em;
+  color: var(--text-color);
+  box-shadow: var(--nav-shadow);
+}
+
+li code,
+p code {
+  background: var(--code-bg);
+  color: var(--purple);
+  padding: 0 .4em;
+  border-radius: 3px;
+  font-size: .85em;
+  font-weight: 700;
+}
+
+/* editor codigo */
+
 @media only screen and (min-width:600px) {}
 
 @media only screen and (max-width:600px) {
@@ -331,18 +442,19 @@ h6 {
     padding: 1rem;
   }
 
-  .logo {
+  .gv-logo {
     display: none;
   }
 
-  .sidenav {
+  .gv-sidenav {
     position: fixed;
     height: var(--nav-width);
     min-height: var(--nav-width);
     min-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    ;
     bottom: 0;
     left: 0;
     top: auto;
@@ -350,21 +462,21 @@ h6 {
     z-index: 999;
   }
 
-  .sidenav .item {
+  .gv-sidenav .gv-item {
     margin-bottom: 0;
   }
 
-  .item i {
+  .gv-item i {
     font-size: 18px;
   }
 
-  .item .item-label {
+  .gv-item .gv-item-label {
     font-size: 12px;
     padding-top: 8px;
   }
 
-  .item img,
-  .item svg {
+  .gv-item img,
+  .gv-item svg {
     width: 1em;
     height: 1em;
   }

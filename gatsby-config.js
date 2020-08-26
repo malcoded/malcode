@@ -22,18 +22,23 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/`,
+        path: `${__dirname}/content/posts`,
         name: `posts`,
       },
     },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `${__dirname}/content/`,
+        path: `${__dirname}/content/posts`,
       },
     },
     {
       resolve: `gatsby-plugin-mdx`,
+      gatsbyRemarkPlugins: [
+        {
+          resolve: `gatsby-remark-images`,
+        },
+      ],
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
@@ -41,7 +46,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-remark-prismjs`,
+    // `gatsby-remark-prismjs`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -84,6 +89,21 @@ module.exports = {
         theme_color: `#12181b`,
         display: `standalone`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              aliases: { sh: "bash", js: "javascript" },
+              showLineNumbers: true,
+            },
+          },
+        ],
       },
     },
 

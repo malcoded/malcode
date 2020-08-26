@@ -5,8 +5,8 @@ import Logo from "./logo"
 
 const Header = () => {
   return (
-    <header className="header">
-      <Link to="/" className="logo">
+    <header className="gv-header">
+      <Link to="/" className="gv-logo">
         <Logo />
       </Link>
     </header>

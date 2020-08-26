@@ -4,27 +4,27 @@ import PropTypes from "prop-types"
 import googleIcon from "./../images/google.svg"
 
 const Nav = ({ siteTitle }) => (
-  <nav className="sidenav">
-    <Link className="item" to="/">
+  <nav className="gv-sidenav">
+    <Link className="gv-item" to="/">
       <i className="fad fa-search" />
-      <span className="item-label">Buscar</span>
+      <span className="gv-item-label">Buscar</span>
     </Link>
-    <Link className="item" to="/posts">
+    <Link className="gv-item" to="/posts">
       <i className="fad fa-code-commit" />
-      <span className="item-label">Posts</span>
+      <span className="gv-item-label">Posts</span>
     </Link>
-    <Link className="item" to="/lessons">
+    <Link className="gv-item" to="/lessons">
       <i className="fad fa-tv-retro" />
-      <span className="item-label">Videos</span>
+      <span className="gv-item-label">Videos</span>
     </Link>
-    <Link className="item" to="/about">
+    <Link className="gv-item" to="/about">
       <i className="fad fa-qrcode" />
-      <span className="item-label">About</span>
+      <span className="gv-item-label">About</span>
     </Link>
 
-    <div className="item">
+    <div className="gv-item">
       <img src={googleIcon} alt="google-login" />
-      <span className="tag tag-sm">Login</span>
+      <span className="gv-tag gv-tag-sm">Login</span>
     </div>
   </nav>
 )

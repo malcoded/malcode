@@ -5,6 +5,7 @@ const Emoji = props => {
       role="img"
       aria-label={props.label ? props.label : ""}
       aria-hidden={props.label ? "false" : "true"}
+      className={props.className ? props.className : null}
     >
       {props.symbol}
     </span>

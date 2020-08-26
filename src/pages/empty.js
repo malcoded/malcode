@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Emoji from "../components/emoji"
 import empty_page from "./../images/empty_page.svg"
@@ -11,9 +10,9 @@ const EmptyPage = ({
   title = "¡CREANDO CONTENIDO... ✍!",
   emoji = "",
 }) => (
-  <Layout>
+  <>
     <SEO title="Pagina vacía" />
-    <div className="row-max-1">
+    <div className="gv-row-max-1">
       <div className="gv-container-not-found">
         <h3>{title}</h3>
         <div className="gv-img_portada_not_found">
@@ -28,7 +27,7 @@ const EmptyPage = ({
         </Link>
       </div>
     </div>
-  </Layout>
+  </>
 )
 
 export default EmptyPage
