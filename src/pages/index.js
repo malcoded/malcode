@@ -38,8 +38,8 @@ const IndexPage = () => {
         </div>
         <div>
           <h1>
-            ¿Quieres desarrollar aplicaciones{" "}
-            <Emoji symbol="🔥" label="fuego" /> increíbles más{" "}
+            ¿Quieres desarrollar aplicaciones
+            <Emoji symbol="🔥" label="fuego" /> increíbles más
             <Emoji symbol="⚡" /> rapido?
           </h1>
           <p>¡Has venido al lugar correcto!</p>

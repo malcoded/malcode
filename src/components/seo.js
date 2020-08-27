@@ -64,6 +64,10 @@ function SEO({ description, lang, meta, title, keywords, url, image }) {
           content: image,
         },
         {
+          property: `og:site_name`,
+          content: "malcode",
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -100,7 +104,7 @@ SEO.defaultProps = {
   lang: `es`,
   meta: [],
   description: ``,
-  keywords: `javascript,react,angular,vue,malcode,desarrollo web, aplicaciones`,
+  keywords: `javascript, react, angular, vue, malcode, desarrollo web, aplicaciones`,
   url: `https://malcode.dev/`,
   image: "https://bit.ly/2EeAGoh",
 }
