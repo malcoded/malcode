@@ -5,24 +5,36 @@ import googleIcon from "./../images/google.svg"
 
 const Nav = ({ siteTitle }) => (
   <nav className="gv-sidenav">
-    <Link className="gv-item" to="/">
+    <Link
+      className="gv-item gv-show-on-movile"
+      to="/"
+      activeClassName="gv-active-link"
+    >
+      <i className="fad fa-home" />
+      <span className="gv-item-label">Inicio</span>
+    </Link>
+    <span className="gv-item">
       <i className="fad fa-search" />
       <span className="gv-item-label">Buscar</span>
-    </Link>
-    <Link className="gv-item" to="/posts">
+    </span>
+    <Link className="gv-item" to="/posts" activeClassName="gv-active-link">
       <i className="fad fa-code-commit" />
       <span className="gv-item-label">Posts</span>
     </Link>
-    <Link className="gv-item" to="/lessons">
+    <Link className="gv-item" to="/lessons" activeClassName="gv-active-link">
       <i className="fad fa-tv-retro" />
       <span className="gv-item-label">Videos</span>
     </Link>
-    <Link className="gv-item" to="/about">
+    <Link
+      className="gv-item gv-hide-on-movile"
+      to="/about"
+      activeClassName="gv-active-link"
+    >
       <i className="fad fa-qrcode" />
-      <span className="gv-item-label">About</span>
+      <span className="gv-item-label">malcode</span>
     </Link>
 
-    <div className="gv-item">
+    <div className="gv-item" activeClassName="gv-active-link">
       <img src={googleIcon} alt="google-login" />
       <span className="gv-tag gv-tag-sm">Login</span>
     </div>

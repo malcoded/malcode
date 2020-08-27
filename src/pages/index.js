@@ -64,7 +64,7 @@ const IndexPage = () => {
             key={index}
             slug={node.fields.slug}
             title={node.frontmatter.title}
-            description={node.excerpt}
+            description={node.frontmatter.description}
             date={node.frontmatter.date}
           />
         ))}

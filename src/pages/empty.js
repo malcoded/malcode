@@ -22,7 +22,7 @@ const EmptyPage = ({
           {description}
           <Emoji arial-label="la-tristeza" symbol={emoji} />
         </p>
-        <Link to={url} className="btn btn-green">
+        <Link to={url} className="gv-btn gv-btn-green">
           {button.label}
         </Link>
       </div>

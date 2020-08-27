@@ -101,6 +101,10 @@ main {
   color: var(--orange-light);
 }
 
+.gv-active-link {
+  color: var(--orange-light);
+}
+
 .gv-tag-sm {
   font-size: .7em;
   display: inline-block;
@@ -126,8 +130,8 @@ footer {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  min-height: 250px;
-  margin-top: 120px;
+  min-height: 100px;
+  margin-top: 2rem;
   font-size: .85em;
   opacity: .8;
 }
@@ -429,10 +433,89 @@ p code {
 
 /* editor codigo */
 
-@media only screen and (min-width:600px) {}
 
-@media only screen and (max-width:600px) {
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
+@media (min-width: 1281px) {
+  .gv-show-on-movile {
+    display: none;
+  }
+
+  .gv-hide-on-movile {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .gv-show-on-movile {
+    display: none;
+  }
+
+  .gv-hide-on-movile {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gv-show-on-movile {
+    display: none;
+  }
+
+  .gv-hide-on-movile {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .gv-show-on-movile {
+    display: none;
+  }
+
+  .gv-hide-on-movile {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .gv-show-on-movile {
+    display: none;
+  }
+
+  .gv-hide-on-movile {
+    display: flex;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
   body {
     font-size: calc(var(--font-size) - 4px);
   }
@@ -453,7 +536,7 @@ p code {
     min-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     ;
     bottom: 0;
     left: 0;
@@ -483,6 +566,18 @@ p code {
 
 
   footer {
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-bottom: var(--nav-width);
+  }
+
+
+
+
+  .gv-show-on-movile {
+    display: flex;
+  }
+
+  .gv-hide-on-movile {
+    display: none;
   }
 }
