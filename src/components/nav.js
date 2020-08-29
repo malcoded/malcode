@@ -31,7 +31,7 @@ const Nav = ({ siteTitle }) => (
       activeClassName="gv-active-link"
     >
       <i className="fad fa-qrcode" />
-      <span className="gv-item-label">malcode</span>
+      <span className="gv-item-label">{siteTitle}</span>
     </Link>
 
     <div className="gv-item" activeClassName="gv-active-link">

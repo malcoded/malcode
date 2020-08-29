@@ -81,6 +81,12 @@ main {
   padding-bottom: .5em;
 }
 
+.gv-snippet-title {
+  font-size: 2em;
+  padding-bottom: 10px;
+  border-bottom: var(--h-border);
+}
+
 .gv-item i {
   font-size: 25px;
 }

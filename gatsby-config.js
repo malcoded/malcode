@@ -74,7 +74,7 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-114960628-2",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
@@ -87,6 +87,12 @@ module.exports = {
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "devcode.dev",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-7834397565485258`,
       },
     },
     {

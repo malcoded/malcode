@@ -1,12 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Pagetitle = ({ title, className }) => {
+const Pagetitle = ({ title, className = "gv-border-bottom" }) => {
   return (
     <header>
-      <h1 className={`${className ? className : ""} gv-border-bottom`}>
-        {title}
-      </h1>
+      <h1 className={className}>{title}</h1>
     </header>
   )
 }

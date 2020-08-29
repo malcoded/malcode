@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Pagetitle from "../components/pagetitle"
 import SEO from "../components/seo"
 import Emoji from "../components/emoji"
+import AuthorTitle from "../components/authorTitle"
 export default ({ pageContext, data }) => {
   const { frontmatter, body } = data.mdx
   const { previous, next, excerpt } = pageContext
@@ -15,7 +16,8 @@ export default ({ pageContext, data }) => {
         title={frontmatter.title}
         description={frontmatter.description || excerpt}
       />
-      <Pagetitle title={frontmatter.title} className="gv-post-title" />
+      <Pagetitle title={frontmatter.title} className="gv-snippet-title" />
+      <AuthorTitle />
       <MDXProvider>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
