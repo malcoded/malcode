@@ -72,7 +72,7 @@ const Buscador = ({ showSearch, toggleOnSearch }) => {
   return (
     <div
       className={
-        showSearch
+        showSearch === true
           ? "gv-buscador-container gv-modal-show"
           : "gv-buscador-container"
       }
@@ -85,12 +85,12 @@ const Buscador = ({ showSearch, toggleOnSearch }) => {
             className="gv-buscador-input"
             onChange={handleOnSearch}
           />
-          <span
-            className="gv-btn gv-btn-sm gv-btn-red gv-buscador-close"
+          <button
+            className="gv-btn gv-btn-sm gv-btn-red gv-buscador-close gv-remove-style"
             onClick={toggleOnSearch}
           >
             Cerrar
-          </span>
+          </button>
         </div>
         {suggestions}
       </div>

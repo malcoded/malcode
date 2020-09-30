@@ -8,6 +8,7 @@ const Nav = ({ siteTitle }) => {
   const [showSearch, setShowSearch] = useState(false)
 
   const toggleOnSearch = () => {
+    console.log("toggleOnSearch -> showSearch", showSearch)
     setShowSearch(!showSearch)
   }
 
@@ -21,10 +22,10 @@ const Nav = ({ siteTitle }) => {
         <i className="fad fa-home" />
         <span className="gv-item-label">Inicio</span>
       </Link>
-      <span className="gv-item" onClick={toggleOnSearch}>
+      <button className="gv-item gv-remove-style" onClick={toggleOnSearch}>
         <i className="fad fa-search" />
         <span className="gv-item-label">Buscar</span>
-      </span>
+      </button>
       <Link className="gv-item" to="/posts" activeClassName="gv-active-link">
         <i className="fad fa-code-commit" />
         <span className="gv-item-label">Posts</span>

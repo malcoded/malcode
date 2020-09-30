@@ -73,6 +73,14 @@ main {
   font-weight: 600;
 }
 
+.gv-remove-style {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
 .gv-page-title,
 .gv-post-title {
   font-size: 3em;
@@ -534,8 +542,6 @@ p code {
 .gv-rating-container button {
   display: flex;
   background: var(--code-bg);
-  position: fixed;
-  top: 50%;
   padding: 11px;
   margin: 0;
   border: 0;
@@ -553,7 +559,7 @@ p code {
 }
 
 .gv-rating-container button:hover {
-  color: var(--orange);
+  background: var(--orange-pink)
 }
 
 /*
@@ -647,6 +653,12 @@ p code {
     padding: 1rem;
   }
 
+  .gv-buscador-hits {
+    padding: 1rem;
+    padding-top: 5em;
+  }
+
+
   .gv-logo {
     display: none;
   }
@@ -691,8 +703,13 @@ p code {
   }
 
   .gv-rating-container {
-    right: 0;
-    bottom: var(--nav-width)
+    right: 6px;
+    z-index: 999;
+  }
+
+  .gv-rating-container button {
+    width: 35px;
+    height: 35px;
   }
 
   footer {
