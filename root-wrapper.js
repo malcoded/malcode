@@ -1,7 +1,7 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/vsDark"
+import theme from "prism-react-renderer/themes/shadesOfPurple"
 import { FileNama } from "./src/components/filename"
 // palenight | shadesOfPurple
 const components = {

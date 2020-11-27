@@ -11,6 +11,7 @@ import "./variables.css"
 import "./layout.css"
 import "./row.css"
 import "./cardPost.css"
+import { AuthProvider } from "./Auth"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,14 +29,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <AuthProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Nav siteTitle={data.site.siteMetadata.title} />
       <div className="gv-main-container">
         <main>{children}</main>
         <Footer menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
-    </>
+    </AuthProvider>
   )
 }
 

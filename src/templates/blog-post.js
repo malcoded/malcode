@@ -1,23 +1,78 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import firebase from "gatsby-plugin-firebase"
 import Layout from "../components/layout"
 import Pagetitle from "../components/pagetitle"
 import SEO from "../components/seo"
 import Emoji from "../components/emoji"
 import AuthorTitle from "../components/authorTitle"
 import { Rating } from "../components/Rating"
+import Modal from "./../components/Modal"
 export default ({ pageContext, data }) => {
   const { frontmatter, body } = data.mdx
-  const { previous, next, excerpt } = pageContext
+  const { previous, next, excerpt, id } = pageContext
+  const [visible, setVisibile] = useState(false)
+  const [post, setPost] = useState(null)
+
+  const handleOnClick = () => {
+    const currentUser = firebase.auth().currentUser
+    if (currentUser) {
+      const currentClap = post && post.claps ? post.claps : 0
+      firebase
+        .firestore()
+        .collection("posts")
+        .doc(id)
+        .update({
+          claps: currentClap + 1,
+        })
+        .then(() => {
+          getMovies(id)
+        })
+        .catch(error => {
+          console.log("handleOnClick -> error", error)
+        })
+    } else {
+      setVisibile(true)
+    }
+  }
+  const authGoogleAcount = async () => {
+    try {
+      const provider = new firebase.auth.GoogleAuthProvider()
+      await firebase.auth().signInWithPopup(provider)
+      setVisibile(false)
+    } catch (error) {
+      console.log("authGoogleAcount -> error", error)
+    }
+  }
+
+  const handleOnCloseModal = () => {
+    setVisibile(false)
+  }
+  const getMovies = async nId => {
+    try {
+      const db = firebase.firestore()
+      const response = await db.collection("posts").doc(nId).get()
+      const data = await response.data()
+      console.log("🚀 ~ file: blog-post.js ~ line 58 ~ data", data)
+      setPost(data)
+    } catch (error) {
+      console.log("error", error)
+    }
+  }
+
+  useEffect(() => {
+    getMovies(id)
+  }, [id])
+
   return (
     <Layout>
       <SEO
         title={frontmatter.title}
         description={frontmatter.description || excerpt}
       />
-      <Rating />
+      <Rating handleOnClick={handleOnClick} post={post} />
       <div className="gv-post-container">
         <Pagetitle title={frontmatter.title} className="gv-snippet-title" />
         <AuthorTitle />
@@ -46,6 +101,11 @@ export default ({ pageContext, data }) => {
           )}
         </nav>
       </div>
+      <Modal
+        visible={visible}
+        handleOnCloseModal={handleOnCloseModal}
+        authGoogleAcount={authGoogleAcount}
+      />
     </Layout>
   )
 }

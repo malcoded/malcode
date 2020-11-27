@@ -15,12 +15,12 @@ const Footer = ({ menuLinks }) => {
           Created with <img src={reactIcon} alt="react" className="gv-pl-4" />
           <img src={firebaseIcon} alt="firebase" /> by
           <a
-            href="https://github.com/gvargash"
+            href="https://malcode.dev/about"
             className="gv-pl-4"
             target="_blank"
             rel="noreferrer"
           >
-            Gildo Vargas
+            malcode
           </a>
         </div>
         <hr className="gv-hr" />

@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: malcode.dev
-Token: 4536af5b6f05c5ed141d80b27b3d4687142dadc473d72e4ffdaccc3340fde1b8

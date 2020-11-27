@@ -123,6 +123,21 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyAMuXthFYMi4Y_BEQ4W9hi0nZj9RRMGZ-A",
+          authDomain: "malcode-c704e.firebaseapp.com",
+          databaseURL: "https://malcode-c704e.firebaseio.com",
+          projectId: "malcode-c704e",
+          storageBucket: "malcode-c704e.appspot.com",
+          messagingSenderId: "799692595033",
+          appId: "1:799692595033:web:e3e5d56e9f708f832f3648",
+          measurementId: "G-SF6NHMYR7K",
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [
