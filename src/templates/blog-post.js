@@ -20,6 +20,7 @@ export default ({ pageContext, data }) => {
     const currentUser = firebase.auth().currentUser
     if (currentUser) {
       const currentClap = post && post.claps ? post.claps : 0
+      console.log("🚀 ~ file: blog-post.js ~ line 16 ~ id", id)
       firebase
         .firestore()
         .collection("posts")
@@ -27,7 +28,8 @@ export default ({ pageContext, data }) => {
         .update({
           claps: currentClap + 1,
         })
-        .then(() => {
+        .then(data => {
+          console.log("🚀 ~ file: blog-post.js ~ line 32 ~ .then ~ data", data)
           getMovies(id)
         })
         .catch(error => {
@@ -55,15 +57,15 @@ export default ({ pageContext, data }) => {
       const db = firebase.firestore()
       const response = await db.collection("posts").doc(nId).get()
       const data = await response.data()
-      console.log("🚀 ~ file: blog-post.js ~ line 58 ~ data", data)
       setPost(data)
+      console.log("🚀 ~ file: blog-post.js ~ line 58 ~ data", data)
     } catch (error) {
       console.log("error", error)
     }
   }
 
   useEffect(() => {
-    getMovies(id)
+    id && getMovies(id)
   }, [id])
 
   return (
