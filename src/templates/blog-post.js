@@ -20,7 +20,6 @@ export default ({ pageContext, data }) => {
     const currentUser = firebase.auth().currentUser
     if (currentUser) {
       const currentClap = post && post.claps ? post.claps : 0
-      console.log("🚀 ~ file: blog-post.js ~ line 16 ~ id", id)
       firebase
         .firestore()
         .collection("posts")
@@ -39,6 +38,7 @@ export default ({ pageContext, data }) => {
       setVisibile(true)
     }
   }
+
   const authGoogleAcount = async () => {
     try {
       const provider = new firebase.auth.GoogleAuthProvider()

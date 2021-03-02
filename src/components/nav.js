@@ -1,11 +1,10 @@
-import React, { useState, useContext } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import googleIcon from "./../images/google.svg"
-import Buscador from "./Buscador"
-
 import firebase from "gatsby-plugin-firebase"
+import PropTypes from "prop-types"
+import React, { useContext, useState } from "react"
+import googleIcon from "./../images/google.svg"
 import { AuthContext } from "./Auth"
+import Buscador from "./Buscador"
 
 const Nav = ({ siteTitle }) => {
   const { currentUser } = useContext(AuthContext)
@@ -50,6 +49,15 @@ const Nav = ({ siteTitle }) => {
         <i className="fad fa-tv-retro" />
         <span className="gv-item-label">Videos</span>
       </Link>
+      <a
+        href="https://malcode.redbubble.com"
+        className="gv-item"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i className="fad fa-shopping-bag" />
+        <span className="gv-item-label">Tienda</span>
+      </a>
       <Link
         to="/about"
         className="gv-item gv-hide-on-movile"
