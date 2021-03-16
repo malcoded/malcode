@@ -49,15 +49,7 @@ const Nav = ({ siteTitle }) => {
         <i className="fad fa-tv-retro" />
         <span className="gv-item-label">Videos</span>
       </Link>
-      <a
-        href="https://malcode.redbubble.com"
-        className="gv-item"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i className="fad fa-shopping-bag" />
-        <span className="gv-item-label">Tienda</span>
-      </a>
+
       <Link
         to="/about"
         className="gv-item gv-hide-on-movile"
