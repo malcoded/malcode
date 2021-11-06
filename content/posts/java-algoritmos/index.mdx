@@ -1,0 +1,70 @@
+---
+title: Programación estructurada en Java.
+date: "2021-11-05"
+description: "🐱‍👓 Para poder programar y desarrollar en Java, necesitas dos cosas: El JDK (Java Development Kit), o Kit de Desarrollo Java, que es un conjunto de librerías y un IDE, los dos más populares en la actualidad es IntelliJ IDE y Visual Studio Code."
+author: "@malcode"
+---
+
+Empecemos…🤞
+
+
+1. Determinar la cantidad de dígitos que tiene un número entero y además mostrar la suma de los dígitos pares e impares.
+
+    ```java
+        import java.util.Scanner;
+
+        public class Exercise002 {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int num, sumaPar = 0, sumaImpar = 0;
+
+                System.out.print("Ingrese un número entero: ");
+                num = (int) sc.nextInt();
+
+                String aCadena = Integer.toString(num);
+                String[] parts = aCadena.split("");
+
+                for (int i = 0; i < parts.length; i++) {
+                    int value = Integer.parseInt(parts[i]);
+                    if ((value) % 2 == 0) {
+                        sumaPar += value;
+                    } else {
+                        sumaImpar += value;
+                    }
+                }
+
+                System.out.println("Cantidad de digitos:" + parts.length);
+                System.out.println("Suma pares:" + sumaPar);
+                System.out.println("Suma impares:" + sumaImpar);
+
+            }
+        }
+    ```
+
+2. Construir un programa que determine la potencia de m^n siendo m un número real y n un número entero. Considere que n puede ser positivo, negativo o cero. No use ningún método de la clase Math para este ejercicio.
+    ```java
+            import java.util.Scanner;
+            
+            public class Exercise001 {
+                public static void main(String[] args) {
+                    Scanner sc = new Scanner(System.in);
+                    double total = 0;
+                    int cant = 0;
+                    System.out.print("Desea comprar otro producto?(s/n): ");
+                    String op = sc.next();
+
+                    while (!op.equals("n")) {
+                        System.out.print("Ingrese precio del articulo: ");
+                        double precio = sc.nextDouble();
+                        total += precio;
+                        cant++;
+
+                        System.out.print("Desea comprar otro producto?(s/n): ");
+                        op = sc.next();
+                    }
+
+                    System.out.println("Cantidad = " + cant);
+                    System.out.println("Total = " + total);
+                }
+            }
+        ```
