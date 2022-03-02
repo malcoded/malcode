@@ -1,0 +1,86 @@
+---
+title: ECMA SCRIPT 2022
+date: "2022-03-02"
+description: "Nuevas características que van a venir este año a JavaScript 🍪"
+author: "@capzzula"
+---
+
+Empecemos…🤞
+
+
+### Métodos privados en clases
+
+```javascript
+class Dog {
+    #id; // Atributo privado
+    name;
+    age;
+
+    constructor(id, name, age) {
+        this.#id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    #getId() {
+        return this.#id;
+    }
+}
+
+const dog= new Dog(1, 'Firulais', 2);
+console.log(dog.#getId()); // undefined ❌ 🤔 getId es un metodo privado
+```
+
+### El método .at()
+
+Permite obtener el primer elemento de una arreglo o cadena. Si la posición es negativa empieza desde el último elemento.
+
+```javascript
+new Int8Array([1, 2, 3]).at(-1); // 3
+[1, 2, 3].at(0); // 1
+'amen'.at(0); // 'a'
+```
+
+### .hasOwn() 
+
+Retorna `true` o `false` si el objeto tiene un propiedad o no.
+
+```javascript
+const dog= {
+    name: 'Firulais',
+    age: 2
+};
+Object.hasOwn(dog,'name'); // true
+Object.hasOwn(dog,'id'); // false
+```
+
+### Cause
+
+Propiedad que puedes usar para dara una estructura a una excepción.
+
+```javascript
+try {
+    fetch('https://api.github.com/users/malcodexxx')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+        throw new Error('Error generado por: ', {cause: error?.response?.message});
+        });
+} catch (err) {
+    console.log(err); // Error generado por: Error:  
+    console.log(err.cause); // TypeError: Not Found
+}
+```
+
+
+### .groupBy()
+
+Agrupar arreglos en subarreglos basados en condicionales al momento de iterar.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numbers.groupBy(n => n % 2 === 0?'even':'odd'); // {even:[ 2, 4, 6, 8, 10 ], odd:[ 1, 3, 5, 7, 9 ]} 
+```
+
+
+Es todo... 🥱
